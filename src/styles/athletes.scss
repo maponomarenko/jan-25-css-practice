@@ -14,9 +14,6 @@
 .athlete {
     width: 200px;
 
-    animation-name: scaleOnHover;
-    animation-duration: 1s;
-
     &:hover {
         background-color: $main-gray;
         border-radius: 10px;
