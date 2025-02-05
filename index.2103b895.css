@@ -24,6 +24,7 @@
 
 .athlete {
   width: 200px;
+  animation-play-state: paused;
 }
 
 .athlete:hover {
@@ -32,6 +33,7 @@
   border-radius: 10px;
   animation-name: scaleOnHover;
   animation-duration: 1s;
+  animation-play-state: running;
   animation-fill-mode: forwards;
 }
 
