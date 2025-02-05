@@ -13,6 +13,8 @@
 
 .athlete {
     width: 200px;
+    
+    animation-play-state: paused;
 
     &:hover {
         background-color: $main-gray;
@@ -21,6 +23,7 @@
         animation-name: scaleOnHover;
         animation-duration: 1s;
         animation-fill-mode: forwards;
+        animation-play-state: running;
     }
     
     &__photo {
