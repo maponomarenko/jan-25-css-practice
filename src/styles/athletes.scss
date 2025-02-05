@@ -1,0 +1,91 @@
+.athletes {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 40px 30px;
+    align-items: center;
+    justify-items: center;
+    padding-block: 30px;
+
+    @media (min-width: 1000px) {
+        grid-template-columns: repeat(4, 200px);
+    }
+}
+
+.athlete {
+    width: 200px;
+
+    animation-name: scaleOnHover;
+    animation-duration: 1s;
+
+    &:hover {
+        background-color: $main-gray;
+        border-radius: 10px;
+        z-index: 1;
+        animation-name: scaleOnHover;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    
+    &__photo {
+        position: relative;
+        margin-bottom: 8px;
+
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        transition-duration: 1s;
+        transition-property: border-radius;
+    }
+
+    &:hover .athlete__photo {
+        border-radius: 60px;
+    }
+
+    &__rank {
+        position: absolute;
+        top: 84px;
+        right: 20px;
+        color: $rank-text-color;
+        font-weight: bolder;
+
+        width: 2rem;
+        height: 2rem;
+        background-color: $main-white;
+
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__name {
+        display: block;
+
+        text-decoration: none;
+
+        color: $name-text-color;
+        font-size: 1.25rem;
+        line-height: 23px;
+        font-weight: bolder;
+        margin-bottom: 10px;
+    }
+
+    &__extra {
+        opacity: 0;
+    }
+
+    &:hover .athlete__extra {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleOnHover {
+    from {
+        transform: scale(1.1);
+    }
+    
+    to {
+        transform: scale(1.3);
+    }
+}
