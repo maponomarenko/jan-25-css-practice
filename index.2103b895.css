@@ -24,8 +24,6 @@
 
 .athlete {
   width: 200px;
-  animation-name: scaleOnHover;
-  animation-duration: 1s;
 }
 
 .athlete:hover {
